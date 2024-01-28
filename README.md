@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install viggo-gascou/kat-rs/<formula>`
+`brew install viggo-gascou/tap/<formulae>`
 
-Or `brew tap viggo-gascou/kat-rs` and then `brew install <formula>`.
+Or `brew tap viggo-gascou/tap` and then `brew install <formulae>`.
 
 ## Documentation
 
