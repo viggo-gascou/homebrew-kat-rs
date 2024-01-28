@@ -1,4 +1,4 @@
-# Viggo-gascou Kat-rs
+# Viggo-gascou Tap
 
 ## How do I install these formulae?
 
