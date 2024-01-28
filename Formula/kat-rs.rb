@@ -1,5 +1,5 @@
 class KatRs < Formula
-  desc "A CLI tool for interacting with the programming problem solving site Kattis"
+  desc "CLI tool for interacting with the programming problem solving site Kattis"
   homepage "https://github.com/viggo-gascou/kat-rs/"
   version "0.1.0"
   license "MIT"
