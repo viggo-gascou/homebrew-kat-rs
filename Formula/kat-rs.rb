@@ -1,8 +1,10 @@
 class KatRs < Formula
   desc "CLI tool for interacting with the programming problem solving site Kattis"
   homepage "https://github.com/viggo-gascou/kat-rs/"
+  url "https://github.com/viggo-gascou/kat-rs/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "6b7f2d15467db4ff12f37961d9a0907a2895189995c2a076dcc1844e8093e090"
   version "0.1.0"
-  license "MIT"
+  license "Apache-2.0"
   head "https://github.com/viggo-gascou/kat-rs.git", branch: "main"
 
   livecheck do
@@ -10,21 +12,13 @@ class KatRs < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  if Hardware::CPU.intel?
-    if OS.mac?
-      url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-Darwin-x86_64"
-      sha256 "0be3b7ca6da4d8a0882e0f025317284f9f343f8437324a99f3e4c653a860ff35"
-    elsif OS.linux?
-      url "https://github.com/vigg-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-Linux-x86_64"
-      sha256 "4488a10b37ea3b1fbfb68bcb3dbe29d2a2b7a711d90d10912f41e687cff8ea1a"
-    end
-  elsif Hardware::CPU.arm?
-    url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-Darwin-arm64"
-    sha256 "235de7865cfd614c1e397bef6000eab52bff37d5e3f9fcfca326a8c5cc0c379d"
-  end
+  depends_on "rust" => :build
 
   def install
-    bin.install "kat-v#{version}-Darwin-#{Hardware::CPU.arch}" => "kat"
+    system "cargo", "install", *std_cargo_args
+    bash_completion.install "kat.bash"
+    fish_completion.install "kat.fish"
+    zsh_completion.install "_kat"
   end
 
   test do
