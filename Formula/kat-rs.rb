@@ -1,8 +1,7 @@
 class KatRs < Formula
   desc "CLI tool for interacting with the programming problem solving site Kattis"
   homepage "https://github.com/viggo-gascou/kat-rs/"
-  url "https://github.com/viggo-gascou/kat-rs/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "6b7f2d15467db4ff12f37961d9a0907a2895189995c2a076dcc1844e8093e090"
+  version "0.1.1"
   license "Apache-2.0"
   head "https://github.com/viggo-gascou/kat-rs.git", branch: "main"
 
@@ -11,10 +10,23 @@ class KatRs < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on "rust" => :build
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 "your_sha256_for_intel"
+    else
+      url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "your_sha256_for_arm"
+    end
+  end
+
+  on_linux do
+    url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "your_sha256_for_linux"
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "kat"
     bash_completion.install "completions/kat.bash"
     fish_completion.install "completions/kat.fish"
     zsh_completion.install "completions/_kat"
