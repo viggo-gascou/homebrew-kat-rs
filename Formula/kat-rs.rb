@@ -10,7 +10,7 @@ class KatRs < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  on_macos do
+  if OS.mac?
     if Hardware::CPU.intel?
       url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-x86_64-apple-darwin.tar.gz"
       sha256 "your_sha256_for_intel"
@@ -20,7 +20,7 @@ class KatRs < Formula
     end
   end
 
-  on_linux do
+  if OS.linux?
     url "https://github.com/viggo-gascou/kat-rs/releases/download/v#{version}/kat-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
     sha256 "your_sha256_for_linux"
   end
