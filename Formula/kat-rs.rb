@@ -3,7 +3,6 @@ class KatRs < Formula
   homepage "https://github.com/viggo-gascou/kat-rs/"
   url "https://github.com/viggo-gascou/kat-rs/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "6b7f2d15467db4ff12f37961d9a0907a2895189995c2a076dcc1844e8093e090"
-  version "0.1.1"
   license "Apache-2.0"
   head "https://github.com/viggo-gascou/kat-rs.git", branch: "main"
 
