@@ -1,7 +1,6 @@
 class KatRs < Formula
   desc "CLI tool for interacting with the programming problem solving site Kattis"
   homepage "https://github.com/viggo-gascou/kat-rs/"
-  version "0.1.1"
   license "Apache-2.0"
   head "https://github.com/viggo-gascou/kat-rs.git", branch: "main"
 
