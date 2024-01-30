@@ -15,9 +15,9 @@ class KatRs < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
-    bash_completion.install "kat.bash"
-    fish_completion.install "kat.fish"
-    zsh_completion.install "_kat"
+    bash_completion.install "completions/kat.bash"
+    fish_completion.install "completions/kat.fish"
+    zsh_completion.install "completions/_kat"
   end
 
   test do
