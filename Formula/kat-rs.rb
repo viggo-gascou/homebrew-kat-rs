@@ -18,7 +18,7 @@ class KatRs < Formula
       sha256 "796097a11a2b22355b16cbd1ce0f17bbadbc2140fcb01a3fd2fbdfd6f286a138"
     end
   end
-    
+
   if OS.linux?
     url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.1/kat-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
     sha256 "532f335578516c882640d5eb649a279338f9349d213410a682d72af46f6caa7e"
