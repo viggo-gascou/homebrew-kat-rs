@@ -11,17 +11,17 @@ class KatRs < Formula
 
   if OS.mac?
     if Hardware::CPU.intel?
-      url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.1/kat-v0.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "6da73ff4547038dc1e22f1490f35287372b14720f56598c93523082e290319ee"
+      url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-x86_64-apple-darwin.tar.gz"
+      sha256 "c9071f4c84730f8b9d190802c48b847cf08ae7ff18bbe9d987d5143792048d87"
     elsif Hardware::CPU.arm?
-      url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.1/kat-v0.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "95aa637a30480299691f845bf88b8225aa2b7ad812c5d81e71c678e557853994"
+      url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "3514fec519a77855b45a88b27e96688a9c63bf87c91748f07b3b8440cb9f53fb"
     end
   end
 
   if OS.linux?
-    url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.1/kat-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "7d9bdcc39721c44acc2722ce4d52e46ad311ef887fdf618880193621c34d05d5"
+    url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "b1fd3a641e06fdabd965526978ec70042c63ce301ee40378fef57ec7e516d8c8"
   end
 
   def install
