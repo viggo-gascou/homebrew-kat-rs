@@ -12,16 +12,16 @@ class KatRs < Formula
   if OS.mac?
     if Hardware::CPU.intel?
       url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-x86_64-apple-darwin.tar.gz"
-      sha256 "c9071f4c84730f8b9d190802c48b847cf08ae7ff18bbe9d987d5143792048d87"
+      sha256 "5429bf7fe22d79ff795d84c4fec957c21f6f1102084f70b8efe732124be2fcfc"
     elsif Hardware::CPU.arm?
       url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "3514fec519a77855b45a88b27e96688a9c63bf87c91748f07b3b8440cb9f53fb"
+      sha256 "cd3bbdda4dc7f0b3385f3b4589c8407a06a44cb65e26a7d8d1e6f3a00348ad7e"
     end
   end
 
   if OS.linux?
     url "https://github.com/viggo-gascou/kat-rs/releases/download/v0.1.2/kat-v0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "b1fd3a641e06fdabd965526978ec70042c63ce301ee40378fef57ec7e516d8c8"
+    sha256 "ecd1ea2ffec46bdbe91f3f3f8a1156ec1f352fc22bc155bd02fa43d17c0e2393"
   end
 
   def install
